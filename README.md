@@ -31,7 +31,23 @@
 </li>
 </ul>
 <p>Visit <a target="_blank" href="https://batchdata.com/product-info" target="_blank" rel="noreferrer">BatchData Product Articles</a> and <a target="_blank" href="https://batchdata.com/faq" target="_blank" rel="noreferrer">FAQ</a> to know more about BatchData.</p>
-<p>Create an account with us and <a target="_blank" href="/docs/batchdata/set-up-authentication">set-up your Authentication</a> to get access to vast dataset that we have.</p></div></div>
+<p>Create an account with us and <a target="_blank" href="https://developer.batchdata.com/docs/batchdata/set-up-authentication">set-up your Authentication</a> to get access to vast dataset that we have.</p></div></div>
+
+
+<h2 id="instructions" class="sl-link-heading sl-text-4xl sl-leading-tight sl-font-prose sl-font-bold sl-text-heading"><a href="#instructions" class="sl-link sl-link-heading__link sl-inline-flex sl-items-center sl-text-current">
+  <div>Want to explore our API's in Realtime?</div>
+  <div class="sl-link-heading__icon sl-text-base sl-ml-4 sl-text-muted"><i role="img" aria-hidden="true" class="sl-icon fal fa-link"></i></div></a></h2>
+<p>Please find installation instructions below:</p>
+
+  <strong>Lamp Stack - PHP </strong>
+
+  <ol dir="auto">
+    <li>Make sure you have an <a href="https://app.batchdata.com/register">account</a> with us & created a <a href="https://developer.batchdata.com/docs/batchdata/set-up-authentication#server-tokens">server side token</a> to get required access to Batchdata API's.</li>
+    <li><a href="https://github.com/BatchDataAPI/BatchDataAPI/archive/refs/heads/main.zip">Download</a> or Clone the repository: <code>git clone https://github.com/BatchDataAPI/BatchDataAPI.git</code></li>
+    <li>Copy & paste the content of the extracted or cloned directory in your local web server (such as Apache) to serve the application on your localhost from the following path <code>http://localhost/BatchdataAPI/lamp-suite/</code></li>
+    <li>Now you will have BatchdataAPI Realtime Testing suite running on your local machine on the following location <code>http://localhost/BatchdataAPI/lamp-suite/index.html</code>, input the server side token in the app along with other required fields & start testing the API's in Realtime</li>  
+    </ol>
+
 
 <h2 id="build-for-tomorrow-with-the-most-accurate-real-estate-and-residential-data-available" class="sl-link-heading sl-text-4xl sl-leading-tight sl-font-prose sl-font-bold sl-text-heading"><a href="#build-for-tomorrow-with-the-most-accurate-real-estate-and-residential-data-available" class="sl-link sl-link-heading__link sl-inline-flex sl-items-center sl-text-current"><div>Build for Tomorrow with the Most Accurate Real Estate and Residential Data Available</div><div class="sl-link-heading__icon sl-text-base sl-ml-4 sl-text-muted"><i role="img" aria-hidden="true" class="sl-icon fal fa-link"></i></div></a></h2>
 <p>Check out our developer resources:</p>
