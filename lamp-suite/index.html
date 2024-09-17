@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="BatchdataAPI Realtime Test Suite">
+    <meta name="author" content="Osman Mohiuddin">
+    <title>BatchdataAPI Realtime Test Suite</title>
+
+    <!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <!-- Custom styles for this template -->
+    <link href="css/batch.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">BatchdataAPI Realtime Testing</a>
+   
+
+   
+  </div>
+</nav>
+
+<div class="nav-scroller bg-body shadow-sm">
+  <nav class="nav nav-underline" aria-label="Secondary navigation">
+    
+    <a class="nav-link active" id="avl" href="javascript:showPanel('avl','av');">Address Verification</a>
+    <a class="nav-link" id="pvl" href="javascript:showPanel('pvl','pv');">Phone Verification </a>
+    <a class="nav-link" id="pll" href="javascript:showPanel('pll','pl');">Property Lookup </a>
+    <a class="nav-link" id="agl" href="javascript:showPanel('agl','ag');">Address Geocode</a>
+    <a class="nav-link" id="sktl" href="javascript:showPanel('sktl','skt');">Property Skip Trace </a>
+  </nav>
+</div>
+
+<main class="container">
+
+  <div class="my-3 p-3 bg-body rounded shadow-sm">
+    <div class="form-signin" style="width: 50%;">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="clientToken" placeholder="Your API Token">
+          <label for="clientToken">Your API Token</label>
+        </div>    
+      </div>
+  </div>
+  
+  <div id="av" class="cnt my-3 p-3 bg-body rounded shadow-sm show">
+    <h5 class="border-bottom pb-2 mb-0">Verify a Address</h5>
+    <div class="form-signin" style="width: 40%;margin: 30px;">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="avAddress" value="4625 S Wendler Dr" placeholder="Address">
+          <label for="floatingInput">Address</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="avCity" value="Tempe" placeholder="City">
+          <label for="floatingInput">City</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="avState" value="AZ" placeholder="State">
+          <label for="floatingInput">State</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="avZip" value="85282" required placeholder="Zip">
+          <label for="floatingInput">Zip</label>
+        </div>     
+        <button class="w-100 btn btn-lg btn-primary" onclick="sendRequest('address');" type="submit">Submit</button>
+      </div>
+      <small class="d-block text-end mt-3">
+        All fields are required
+      </small>
+  </div>
+
+  <div id="pv" class="cnt my-3 p-3 bg-body rounded shadow-sm hide">
+    <h5 class="border-bottom pb-2 mb-0">Verify a Phone Number</h5>
+    <div class="form-signin" style="width: 40%;margin: 30px;">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="pvPhone" value="" placeholder="Phone">
+          <label for="floatingInput">Phone</label>
+        </div>  
+        <button class="w-100 btn btn-lg btn-primary" onclick="sendRequest('phone');" type="submit">Submit</button>
+      </div>
+      <small class="d-block text-end mt-3">
+        All fields are required
+      </small>
+  </div>
+
+  <div id="pl" class="cnt my-3 p-3 bg-body rounded shadow-sm hide">
+    <h5 class="border-bottom pb-2 mb-0">Property Lookup</h5>
+    <div class="form-signin" style="width: 40%;margin: 30px;">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="plAddress" value="4625 S Wendler Dr" placeholder="Address">
+          <label for="floatingInput">Address</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="plCity" value="Tempe" placeholder="City">
+          <label for="floatingInput">City</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="plState" value="AZ" placeholder="State">
+          <label for="floatingInput">State</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="plZip" value="85282" required placeholder="Zip">
+          <label for="floatingInput">Zip</label>
+        </div>     
+        <button class="w-100 btn btn-lg btn-primary" onclick="sendRequest('property');" type="submit">Submit</button>
+      </div>
+      <small class="d-block text-end mt-3">
+        All fields are required
+      </small>
+  </div>
+  
+  <div id="ag" class="cnt my-3 p-3 bg-body rounded shadow-sm hide">
+    <h5 class="border-bottom pb-2 mb-0">Address Geocoding Conversion</h5>
+    <div class="form-signin" style="width: 40%;margin: 30px;">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="agAddress" value="4625 S Wendler Dr, Tempe, AZ" placeholder="Adress">
+          <label for="floatingInput">Address</label>
+        </div>  
+        <button class="w-100 btn btn-lg btn-primary" onclick="sendRequest('geocode');" type="submit">Submit</button>
+      </div>
+      <small class="d-block text-end mt-3">
+        All fields are required
+      </small>
+  </div>
+
+  <div id="skt" class="cnt my-3 p-3 bg-body rounded shadow-sm hide">
+    <h5 class="border-bottom pb-2 mb-0">Skip Trace a Person</h5>
+    <div class="form-signin" style="width: 40%;margin: 30px;">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="sktAddress" value="4625 S Wendler Dr" placeholder="Address">
+          <label for="floatingInput">Address</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="sktCity" value="Tempe" placeholder="City">
+          <label for="floatingInput">City</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="sktState" value="AZ" placeholder="State">
+          <label for="floatingInput">State</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="sktZip" value="85282" required placeholder="Zip">
+          <label for="floatingInput">Zip</label>
+        </div>     
+        <button class="w-100 btn btn-lg btn-primary" onclick="sendRequest('skiptrace');" type="submit">Submit</button>
+      </div>
+      <small class="d-block text-end mt-3">
+        All fields are required
+      </small>
+  </div>
+
+
+  <div class="my-3 p-3 bg-body rounded shadow-sm">
+    <h5 class="border-bottom pb-2 mb-0">Output</h5>
+    <div class="text-muted pt-3">
+     <code id="output">Please submit form above</code>
+    </div>
+    
+    
+  </div>
+</main>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="js/batch.js"></script>
+  </body>
+</html>
