@@ -48,6 +48,19 @@
     <li>Now you will have BatchdataAPI Realtime Testing suite running on your local machine on the following location <code>http://localhost/BatchdataAPI/lamp-suite/index.html</code>, input the server side token in the app along with other required fields & start testing the API's in Realtime</li>  
     </ol>
 
+<strong>NodeJS </strong>
+<ol dir="auto">
+  <li>Make sure you have an <a href="https://app.batchdata.com/register">account</a> with us & created a <a href="https://developer.batchdata.com/docs/batchdata/set-up-authentication#server-tokens">server side token</a> to get required access to Batchdata API's.</li>
+  <li><a href="https://github.com/BatchDataAPI/BatchDataAPI/blob/main/nodejs-suite/batchdata-api-suite.zip">Download</a> the repository</code></li>
+  <li>Extract the content of the directory in the location where Node.js and a node global package, npm installed in your environement</li>
+  <li>Open terminal in same location path as #3 & type the following commands in sequen to run the project: <br>
+    <code>cd batchdata-api-suite</code><br>
+    <code>npm install</code><br>
+    <code>npm start || npm run start:dev</code>
+  </li>
+  <li>Now you will have BatchdataAPI Realtime Testing suite running on your local machine on the following location <code>http://localhost:PORT</code>, input the server side token in the app along with other required fields & start testing the API's in Realtime</li>  
+  </ol>
+
 
 <h2 id="build-for-tomorrow-with-the-most-accurate-real-estate-and-residential-data-available" class="sl-link-heading sl-text-4xl sl-leading-tight sl-font-prose sl-font-bold sl-text-heading"><a href="#build-for-tomorrow-with-the-most-accurate-real-estate-and-residential-data-available" class="sl-link sl-link-heading__link sl-inline-flex sl-items-center sl-text-current"><div>Build for Tomorrow with the Most Accurate Real Estate and Residential Data Available</div><div class="sl-link-heading__icon sl-text-base sl-ml-4 sl-text-muted"><i role="img" aria-hidden="true" class="sl-icon fal fa-link"></i></div></a></h2>
 <p>Check out our developer resources:</p>
